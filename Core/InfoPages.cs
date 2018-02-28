@@ -4,8 +4,8 @@
     {
         public static void Decompile()
         {
-            var fInfoPages = new Text(Common.InputPath + @"\info_pages.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_info_pages.py");
+            var fInfoPages = new Text(Common.InputPath + "/info_pages.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_info_pages.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.InfoPages);
             fInfoPages.GetString();

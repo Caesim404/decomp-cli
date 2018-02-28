@@ -6,7 +6,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Win32FileReader(Common.InputPath + @"\quests.txt");
+            var fID = new Win32FileReader(Common.InputPath + "/quests.txt");
             fID.ReadLine();
             int n = Convert.ToInt32(fID.ReadLine());
             var aQuests = new string[n];
@@ -38,8 +38,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fQuests = new Text(Common.InputPath + @"\quests.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_quests.py");
+            var fQuests = new Text(Common.InputPath + "/quests.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_quests.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Quests);
             fQuests.GetString();

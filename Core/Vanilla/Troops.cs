@@ -24,8 +24,8 @@ namespace Decomp.Core.Vanilla
 
         public static void Decompile()
         {
-            var fTroops = new Text(Common.InputPath + @"\troops.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_troops.py");
+            var fTroops = new Text(Common.InputPath + "/troops.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_troops.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Troops);
 

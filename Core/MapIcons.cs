@@ -8,7 +8,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\map_icons.txt");
+            var fID = new Text(Common.InputPath + "/map_icons.txt");
             fID.GetString();
             int n = Convert.ToInt32(fID.GetString());
             var aMapIcons = new string[n];
@@ -52,8 +52,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fIcons = new Text(Common.InputPath + @"\map_icons.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_map_icons.py");
+            var fIcons = new Text(Common.InputPath + "/map_icons.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_map_icons.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Icons);
             fIcons.GetString();

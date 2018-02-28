@@ -7,7 +7,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\scene_props.txt");
+            var fID = new Text(Common.InputPath + "/scene_props.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aSceneProps = new string[n];
@@ -98,8 +98,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fSceneProps = new Text(Common.InputPath + @"\scene_props.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_scene_props.py");
+            var fSceneProps = new Text(Common.InputPath + "/scene_props.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_scene_props.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.SceneProps);
             fSceneProps.GetString();

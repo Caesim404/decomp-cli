@@ -17,7 +17,7 @@ namespace Decomp.Core
 
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\parties.txt");
+            var fID = new Text(Common.InputPath + "/parties.txt");
             fID.GetString();
             int n = fID.GetInt();
             fID.GetInt();
@@ -82,8 +82,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fParties = new Text(Common.InputPath + @"\parties.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_parties.py");
+            var fParties = new Text(Common.InputPath + "/parties.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_parties.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Parties);
             fParties.GetString();

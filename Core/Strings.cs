@@ -6,7 +6,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Win32FileReader(Common.InputPath + @"\strings.txt");
+            var fID = new Win32FileReader(Common.InputPath + "/strings.txt");
             fID.ReadLine();
             int n = Convert.ToInt32(fID.ReadLine());
             var aStrings = new string[n];
@@ -23,8 +23,8 @@ namespace Decomp.Core
         
         public static void Decompile()
         {
-            var fStrings = new Text(Common.InputPath + @"\strings.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_strings.py");
+            var fStrings = new Text(Common.InputPath + "/strings.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_strings.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Strings);
             fStrings.GetString();

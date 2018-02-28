@@ -8,7 +8,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\mission_templates.txt");
+            var fID = new Text(Common.InputPath + "/mission_templates.txt");
             fID.GetString();
             int n = Convert.ToInt32(fID.GetString());
             var aMissionTemplates = new string[n];
@@ -159,8 +159,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fMissionTemplates = new Text(Common.InputPath + @"\mission_templates.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_mission_templates.py");
+            var fMissionTemplates = new Text(Common.InputPath + "/mission_templates.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_mission_templates.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.MissionTemplates);
             fMissionTemplates.GetString();

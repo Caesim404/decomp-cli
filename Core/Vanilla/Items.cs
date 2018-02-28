@@ -124,8 +124,8 @@ namespace Decomp.Core.Vanilla
 
         public static void Decompile()
         {
-            var fItems = new Text(Common.InputPath + @"\item_kinds1.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_items.py");
+            var fItems = new Text(Common.InputPath + "/item_kinds1.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_items.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Items);
             fItems.GetString();

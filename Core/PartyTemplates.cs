@@ -10,7 +10,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Win32FileReader(Common.InputPath + @"\party_templates.txt");
+            var fID = new Win32FileReader(Common.InputPath + "/party_templates.txt");
             fID.ReadLine();
             int n = Convert.ToInt32(fID.ReadLine());
             var aPartyTemplates = new string[n];
@@ -87,8 +87,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fTemplates = new Text(Common.InputPath + @"\party_templates.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_party_templates.py");
+            var fTemplates = new Text(Common.InputPath + "/party_templates.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_party_templates.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.PartyTemplates);
             fTemplates.GetString();

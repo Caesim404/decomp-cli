@@ -47,7 +47,7 @@ namespace Decomp.Core
 
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\troops.txt");
+            var fID = new Text(Common.InputPath + "/troops.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aTroops = new string[n];
@@ -132,8 +132,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fTroops = new Text(Common.InputPath + @"\troops.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_troops.py");
+            var fTroops = new Text(Common.InputPath + "/troops.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_troops.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Troops);
 

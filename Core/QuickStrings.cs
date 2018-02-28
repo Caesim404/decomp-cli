@@ -6,7 +6,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Win32FileReader(Common.InputPath + @"\quick_strings.txt");
+            var fID = new Win32FileReader(Common.InputPath + "/quick_strings.txt");
             int n = Convert.ToInt32(fID.ReadLine());
             var aQuickStrings = new string[n];
             for (int i = 0; i < n; i++)

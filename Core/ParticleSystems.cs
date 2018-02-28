@@ -9,7 +9,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\particle_systems.txt");
+            var fID = new Text(Common.InputPath + "/particle_systems.txt");
             fID.GetString();
             int n = Convert.ToInt32(fID.GetString());
             var aParticleSystems = new string[n];
@@ -53,8 +53,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fParticles = new Text(Common.InputPath + @"\particle_systems.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_particle_systems.py");
+            var fParticles = new Text(Common.InputPath + "/particle_systems.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_particle_systems.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.ParticleSystems);
             fParticles.GetString();

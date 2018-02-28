@@ -17,12 +17,12 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fGroundSpecs = new Text(Common.InputPath + @"\ground_specs.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_ground_specs.py");
+            var fGroundSpecs = new Text(Common.InputPath + "/ground_specs.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_ground_specs.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.GroundSpecs);
 
-            int n = GetLexemsInFile(Common.InputPath + @"\ground_specs.txt") / 8;
+            int n = GetLexemsInFile(Common.InputPath + "/ground_specs.txt") / 8;
 
             for (int i = 0; i < n; i++)
             {

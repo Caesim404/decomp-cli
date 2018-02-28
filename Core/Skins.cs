@@ -7,7 +7,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\skins.txt");
+            var fID = new Text(Common.InputPath + "/skins.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aSkins = new string[n];
@@ -103,8 +103,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fSkins = new Text(Common.InputPath + @"\skins.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_skins.py");
+            var fSkins = new Text(Common.InputPath + "/skins.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_skins.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Skins);
             fSkins.GetString();

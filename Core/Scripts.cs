@@ -4,12 +4,12 @@
     {
         public static string[] InitializeVariables()
         {
-            return Win32FileReader.ReadAllLines(Common.InputPath + @"\variables.txt");
+            return Win32FileReader.ReadAllLines(Common.InputPath + "/variables.txt");
         }
 
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\scripts.txt");
+            var fID = new Text(Common.InputPath + "/scripts.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aScripts = new string[n];
@@ -40,8 +40,8 @@
 
         public static void Decompile()
         {
-            var fScripts = new Text(Common.InputPath + @"\scripts.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_scripts.py");
+            var fScripts = new Text(Common.InputPath + "/scripts.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_scripts.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Scripts);
             fScripts.GetString();

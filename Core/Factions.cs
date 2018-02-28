@@ -8,7 +8,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\factions.txt");
+            var fID = new Text(Common.InputPath + "/factions.txt");
             fID.GetString();
             int n = Convert.ToInt32(fID.GetString());
             var aFactions = new string[n];
@@ -35,8 +35,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fFactions = new Text(Common.InputPath + @"\factions.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_factions.py");
+            var fFactions = new Text(Common.InputPath + "/factions.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_factions.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Factions);
             fFactions.GetString();

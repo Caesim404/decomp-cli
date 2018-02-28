@@ -9,7 +9,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Win32FileReader(Common.InputPath + @"\actions.txt");
+            var fID = new Win32FileReader(Common.InputPath + "/actions.txt");
             var n = Convert.ToInt32(fID.ReadLine());
             var aAnimations = new string[n];
             for (int i = 0; i < n; i++)
@@ -180,8 +180,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fActions = new Text(Common.InputPath + @"\actions.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_animations.py");
+            var fActions = new Text(Common.InputPath + "/actions.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_animations.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Animations);
             int iActions = fActions.GetInt();

@@ -7,7 +7,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\sounds.txt");
+            var fID = new Text(Common.InputPath + "/sounds.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aSounds = new string[n];
@@ -69,8 +69,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fSounds = new Text(Common.InputPath + @"\sounds.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_sounds.py");
+            var fSounds = new Text(Common.InputPath + "/sounds.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_sounds.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Sounds);
             fSounds.GetString();

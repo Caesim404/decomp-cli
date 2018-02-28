@@ -6,7 +6,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\presentations.txt");
+            var fID = new Text(Common.InputPath + "/presentations.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aPresentations = new string[n];
@@ -65,8 +65,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fPresentations = new Text(Common.InputPath + @"\presentations.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_presentations.py");
+            var fPresentations = new Text(Common.InputPath + "/presentations.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_presentations.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Presentations);
             fPresentations.GetString();

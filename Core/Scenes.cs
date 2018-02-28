@@ -7,7 +7,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\scenes.txt");
+            var fID = new Text(Common.InputPath + "/scenes.txt");
             fID.GetString();
             int n = fID.GetInt();
             var aScenes = new string[n];
@@ -61,8 +61,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fScenes = new Text(Common.InputPath + @"\scenes.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_scenes.py");
+            var fScenes = new Text(Common.InputPath + "/scenes.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_scenes.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Scenes);
             fScenes.GetString();

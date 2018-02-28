@@ -7,7 +7,7 @@ namespace Decomp.Core
     {
         public static string[] Initialize()
         {
-            var fID = new Text(Common.InputPath + @"\menus.txt");
+            var fID = new Text(Common.InputPath + "/menus.txt");
             fID.GetString();
             int n = Convert.ToInt32(fID.GetString());
             var aMenus = new string[n];
@@ -104,8 +104,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fMenus = new Text(Common.InputPath + @"\menus.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_game_menus.py");
+            var fMenus = new Text(Common.InputPath + "/menus.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_game_menus.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Menus);
             fMenus.GetString();

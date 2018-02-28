@@ -118,6 +118,8 @@ from ID_troops import *";
         }
 
         public static string InputPath;
+
+        public static string InputFile;
         public static string OutputPath;
 
         public static string GetParam(ulong lParam)
@@ -751,6 +753,7 @@ from ID_troops import *";
         }
 
         public static bool NeedId = true;
+        public static bool DecompileShaders = false;
         public static void GenerateId(string fileOut, string[] content, string prefix = "")
         {
             if (!NeedId) return;

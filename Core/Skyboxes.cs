@@ -48,8 +48,8 @@ namespace Decomp.Core
 
         public static void Decompile()
         {
-            var fSkyboxes = new Text(Common.InputPath + @"\skyboxes.txt");
-            var fSource = new Win32FileWriter(Common.OutputPath + @"\module_skyboxes.py");
+            var fSkyboxes = new Text(Common.InputPath + "/skyboxes.txt");
+            var fSource = new Win32FileWriter(Common.OutputPath + "/module_skyboxes.py");
             fSource.WriteLine(Header.Standard);
             fSource.WriteLine(Header.Skyboxes);
 
