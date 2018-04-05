@@ -9,7 +9,7 @@ namespace Decomp.Core
 {
     public class Win32FileWriter : StreamWriter
     {
-        public Win32FileWriter(string s) : base(s, false, Encoding.GetEncoding("utf-8")) {}
+        public Win32FileWriter(string s) : base(s, false) {}
 
         public static void WriteAllText(string fileName, string data)
         {
